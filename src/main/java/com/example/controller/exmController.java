@@ -22,9 +22,15 @@ public class exmController {
 				.getAuthentication()
 				.getPrincipal();
 		String name = userDetails.getUsername();
-		String password = userDetails.getPassword();
+		
 		System.out.println(name);
 		return "index";
 	}
+	
+	@RequestMapping(value="logout")
+	public String logout() {
+		return "logout";
+	}
+	
 	
 }
